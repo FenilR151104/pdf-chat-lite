@@ -16,7 +16,8 @@ export default function Chat({ documentId }) {
     try {
       setLoading(true);
 
-      const res = await axios.post("/api/ask", {
+      const res = await axios.post("https://pdf-chat-lite-d5oy.onrender.com/api/ask", 
+        {
         documentId,
         question
       });

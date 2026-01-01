@@ -16,7 +16,9 @@ export default function Upload({ setDocumentId }) {
       const form = new FormData();
       form.append("file", file);
 
-      const res = await axios.post("/api/upload", form, {
+      const res = await axios.post("https://pdf-chat-lite-d5oy.onrender.com/api/upload", 
+        form, 
+        {
         headers: { "Content-Type": "multipart/form-data" }
       });
       // alert("Uploaded Successfully");
